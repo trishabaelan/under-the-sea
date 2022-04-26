@@ -7,7 +7,7 @@ html {
     box-sizing: inherit;
   }
 
-body{background: rgb(2,0,36);
+body{
     background: linear-gradient(0deg, rgba(2,0,36,1) 10%, rgba(9,9,121,1) 49%, rgba(0,212,255,1) 100%);
     font-family: 'Poppins', sans-serif;
     margin-right: 8%;
