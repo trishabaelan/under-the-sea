@@ -77,8 +77,14 @@ button {
   font-weight: bold;
   margin-right: 50%;
   margin-left: 40%;
-  margin-bottom: 10%}
+  margin-bottom: 10%;
+  text-decoration: none;}
+
 
 .form-group {
   padding: 10%;
+}
+
+input {
+  font-size: 2rem;
 }
