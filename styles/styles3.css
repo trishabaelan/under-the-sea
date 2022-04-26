@@ -1,17 +1,17 @@
+html {
+  box-sizing: border-box; 
+}
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
-html {
+body{background: rgb(2,0,36);
+  background: linear-gradient(0deg, rgba(2,0,36,1) 10%, rgba(9,9,121,1) 49%, rgba(0,212,255,1) 100%);
+  font-family: 'Poppins', sans-serif;
   margin-right: 8%;
   margin-left: 8%;
-}
-
-body {
-    background: rgb(2,0,36);
-    background: linear-gradient(0deg, rgba(2,0,36,1) 10%, rgba(9,9,121,1) 49%, rgba(0,212,255,1) 100%);
 }
 
 .nav {
