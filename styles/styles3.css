@@ -7,51 +7,45 @@
 html {
   margin-right: 8%;
   margin-left: 8%;
-  background: rgb(120, 193, 255);
-  background: linear-gradient(
-    180deg,
-    rgba(120, 193, 255, 1) 19%,
-    rgba(67, 137, 224, 1) 47%,
-    rgba(0, 63, 154, 1) 74%
-  );
 }
 
-nav {
-  margin-top: 30px;
-  margin-bottom: 30px;
+body {
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 10%, rgba(9,9,121,1) 49%, rgba(0,212,255,1) 100%);
 }
-nav ul {
+
+.nav {
+  overflow: hidden;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-nav ul a {
-  display: inline-grid;
-  padding: 2rem;
-  font-family: Poppins;
-  color: white;
-  font-size: 1.75rem;
-  text-decoration: none;
 }
 
-nav ul a:hover {
+.nav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 0.875rem 1rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.nav a:hover {
   color: #003f9a;
 }
 
-nav ul a:nth-child(3){
+.nav a:active {
   color: #003f9a;
 }
 
 h1 {
-  font-family: Berkshire Swash;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  color: #003f9a;
+  font-family: Berkshire Swash;
   font-size: 5rem;
-  margin-top: 40px;
-  margin-bottom: 0px;
+  padding-bottom: 0rem;
+  color: #003f9a
 }
 
 h2 {

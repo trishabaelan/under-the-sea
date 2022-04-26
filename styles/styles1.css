@@ -1,7 +1,7 @@
 /* ===== YOUR CSS GOES HERE ===== */
 /* ===== START WITH GLOBAL STYLES THEN USE MEDIA QUERIES FOR LAYOUT ADJUSTMENTS ===== */
 html {
-    box-sizing: border-box;
+    box-sizing: border-box; 
   }
   *,
   *::before,
@@ -12,6 +12,42 @@ html {
 body{background: rgb(2,0,36);
     background: linear-gradient(0deg, rgba(2,0,36,1) 10%, rgba(9,9,121,1) 49%, rgba(0,212,255,1) 100%);
     font-family: 'Poppins', sans-serif;
+    margin-right: 8%;
+    margin-left: 8%;
+}
+
+.nav {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 0.875rem 1rem;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.nav a:hover {
+  color: #003f9a;
+}
+
+.nav a:active {
+  color: #003f9a;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: Berkshire Swash;
+  font-size: 5rem;
+  padding-bottom: 0rem;
+  color: #003f9a
 }
 
 h4 {
@@ -102,50 +138,10 @@ img {
   width: 60%;
   }
 
-nav > p {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width:80%;
-}
-
 p {
     font-weight:300;
 }
 
-.nav {
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .nav a {
-    color: #f2f2f2;
-    text-align: center;
-    padding: 0.875rem 1rem;
-    text-decoration: none;
-    font-size: 1rem;
-  }
-  
-  .nav a:hover {
-    color: black;
-  }
-  
-  .nav a.active {
-    background-color: rgba(0,212,255,1);
-    color: white;
-  }
-
-  h1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 3rem;
-    padding-bottom: 0rem;
-  }
 
   .button {
     background-color: rgba(0,212,255,1);
