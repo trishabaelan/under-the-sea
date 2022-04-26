@@ -1,0 +1,166 @@
+/* ===== YOUR CSS GOES HERE ===== */
+/* ===== START WITH GLOBAL STYLES THEN USE MEDIA QUERIES FOR LAYOUT ADJUSTMENTS ===== */
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+body{background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 10%, rgba(9,9,121,1) 49%, rgba(0,212,255,1) 100%);
+    font-family: 'Poppins', sans-serif;
+}
+
+h4 {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 0rem;
+}
+
+.epi_fish {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(3,auto);
+}
+.epi {
+    color: white;
+}
+.meso {
+    color:white;
+}
+.bath {
+    color:white;
+}
+.abys {
+    color: white;
+}
+.hadal {
+    color: white;
+}
+.meso_fish {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(3,auto);
+}
+
+.meso_fish p {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.bath_fish {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(3,auto);
+}
+
+.bath_fish p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.abys_fish{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(3,auto);
+}
+
+.abys_fish p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hadal_fish{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: repeat(3,auto);
+}
+
+.hadal_fish p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+  width: 60%;
+  }
+
+nav > p {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:80%;
+}
+
+p {
+    font-weight:300;
+}
+
+.nav {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nav a {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 0.875rem 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .nav a:hover {
+    color: black;
+  }
+  
+  .nav a.active {
+    background-color: rgba(0,212,255,1);
+    color: white;
+  }
+
+  h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 0rem;
+  }
+
+  .button {
+    background-color: rgba(0,212,255,1);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2em;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 1em 0.5em;
+  }
