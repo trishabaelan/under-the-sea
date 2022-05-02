@@ -16,6 +16,7 @@ body{background: rgb(2,0,36);
     font-family: 'Poppins', sans-serif;
     margin-right: 8%;
     margin-left: 8%;
+    height: 100%;
 }
 
 .nav {
@@ -191,6 +192,7 @@ img {
     margin-bottom: 10%
   }
   
+
   .home-box .btn{
     margin-top: 1.5rem;
   }
@@ -199,16 +201,19 @@ img {
     display: none;
   }
   
-  h3{
+  .home-box h3{
     display: flex;
     justify-content: center;
     align-content: center;
     font-size: 3rem;
+    color: white;
   }
 
    .quiz-box.hide{
     display: none;
   }
+
+
 
   .quiz-box .question-number{
     font-size: 1.1rem;
