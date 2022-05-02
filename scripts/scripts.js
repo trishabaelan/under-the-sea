@@ -7,22 +7,47 @@ const quiz = [
     {
       q: "This zone is also known as the twilight zone.",
       options: ['Bathypelagic','Epipelagic','Abyssopelagic','Mesopelagic'],
-      answer: 0
+      answer: 3
     },
     {
         q: "Which of the following does not live in the Mesopelagic zone?",
         options: ['Octopus','Wolf Eels','Amphipods','Swordfish'],
-        answer: 0
+        answer: 2
       },
       {
         q: "In this zone, the only light present is produced by sea creatures themselves.",
-        options: ['Epipelagic','Mesopelagic','Bathypelagic','Abyssopelagic'],
-        answer: 0
+        options: ['Epipelagic','Bathypelagic','Abyssopelagic','Mesopelagic'],
+        answer: 1
       },
       {
         q: "This is the deepest zone of the ocean.",
-        options: ['Bathypelagic','Epipelagic','Abyssopelagic','Mesopelagic'],
+        options: ['Bathypelagic','Hadalpelagic','Abyssopelagic','Mesopelagic'],
+        answer: 1
+      },
+      {
+        q: "Sea Spiders are known for what?",
+        options: ['Their short legs that they use for swimming. ','Their webs.','Their soft bodies.','Their long legs and adaptation for efficiently using oxygen.'],
+        answer: 3
+      },
+      {
+        q: "Dolphins are known for their communication skills. How do dolphins communicate?",
+        options: ['Echolocation','Blinking','Talking','Splashing'],
         answer: 0
+      },
+      {
+        q: "Anglerfish can be found in what zone?",
+        options: ['Epipelagic','Bathypelagic','Abyssopelagic','Mesopelagic'],
+        answer: 1
+      },
+      {
+        q: "Sea Turtles are important because…",
+        options: ['They control shark populations.','They protect king crabs.','They maintain seagrass beds and coral reefs.','They are mammals.'],
+        answer: 2
+      },
+      {
+        q: "These Abyssopelagic zone creatures protect baby king crabs.",
+        options: ['Sea Spiders','Sea Pigs','Anglerfish','Basket Stars'],
+        answer: 1
       }
   ];
 
@@ -33,13 +58,14 @@ const answersIndicatorContainer = document.querySelector(".answers-indicator")
 const homeBox = document.querySelector(".home-box");
 const quizBox = document.querySelector(".quiz-box");
 const resultBox = document.querySelector(".result-box")
+const questionLimit = 5;
 
 let questionCounter = 0;
 let currentQuestion;
 let availableQuestions = [];
 let avaiableOptions = [];
 let correctAnswers = 0;
-let attempts = 0;
+let attempt = 0;
 
 //push the questions into availableQuestions
 function setAvailableQuestions(){
@@ -51,8 +77,9 @@ function setAvailableQuestions(){
 
 //set question number and question and option
 function getNewQuestion(){
+
     //set question number
-    questionNumber.innerHTML = "Question" + " " + (questionCounter + 1) + " " + "of" + " " + quiz.length;
+    questionNumber.innerHTML = "Question" + " " + (questionCounter + 1) + " " + "of" + " " + questionLimit;
     //set question text
     // get random question
     const questionIndex = availableQuestions[Math.floor(Math.random() * availableQuestions.length)]
@@ -130,7 +157,8 @@ function unclickableOptions(){
 }
 
 function answersIndicator(){
-    const totalQuestion = quiz.length;
+    answersIndicatorContainer.innerHTML = '';
+    const totalQuestion = questionLimit;
     for(let i=0; i<totalQuestion; i++){
         const indicator = document.createElement("div");
         answersIndicatorContainer.appendChild(indicator);
@@ -144,8 +172,7 @@ function updateAnswerIndicator(markType){
 }
 
 function next(){
-    if(questionCounter === quiz.length){
-        console.log('quiz over')
+    if(questionCounter === questionLimit){
         quizOver();
     }
     else{
@@ -154,10 +181,51 @@ function next(){
 }
 
 function quizOver(){
-
+    //hide quiz box
+    quizBox.classList.add('hide');
+    //show result Box
+    resultBox.classList.remove("hide");
+    quizResult();
 }
 
-window.onload = function(){
+function quizResult(){
+    resultBox.querySelector(".total-question").innerHTML = questionLimit;
+    resultBox.querySelector(".total-attempt").innerHTML = attempt;
+    resultBox.querySelector(".total-correct").innerHTML = correctAnswers;
+    resultBox.querySelector(".total-wrong").innerHTML = attempt-correctAnswers;
+    const percentage = (correctAnswers/questionLimit)*100;
+    resultBox.querySelector(".total-percentage").innerHTML = percentage.toFixed() + "%";
+    resultBox.querySelector(".total-score").innerHTML = correctAnswers + " / " + questionLimit;
+}
+
+function resetQuiz(){
+    questionCounter = 0;
+    correctAnswers = 0;
+    attempt = 0;
+    availableQuestions = [];
+}
+
+function tryAgainQuiz(){
+ //hide the resultBox
+ resultBox.classList.add("hide");
+ //show the quizbox
+ quizBox.classList.remove("hide");
+ resetQuiz();
+ startQuiz();
+}
+
+function goToHome(){
+    resultBox.classList.add("hide");
+    homeBox.classList.remove("hide");
+    resetQuiz();
+}
+// #### Starting Point ####
+
+function startQuiz(){
+
+    //hide home box
+    homeBox.classList.add("hide");
+    quizBox.classList.remove("hide");
     //first we will set all questionsin availableQuestions array
     setAvailableQuestions();
     //second we will call getNewQuestion(); function
@@ -166,134 +234,8 @@ window.onload = function(){
     answersIndicator()
 }
 
-
-  /*function quiz(){
-    // stores HTML output
-    let output = [];
-
-    // build HTML for each q
-    qs.forEach((currentq, qNumber) => {
-        // store list of answer options
-        let options = [];
-
-        // for each answer
-        for(letter in currentq.options) {
-
-            // add HTML radio button
-            options.push(
-                // template literals
-                `<label><input type="radio" name="q${qNumber}" value="${letter}">
-                    <span class="customRadio"></span>
-                        ${letter} :
-                        ${currentq.options[letter]}
-                </label>`
-            );
-        }
-        output.push(
-            `<div class="slide">
-                <div class="q">${currentq.q}</div>
-                <div class="options">${options.join("")}</div>
-            </div>`
-             // 'join' expression takes list of options and puts them together in one string
-        );
-    });
-    // combine output list into one string of HTML and put it on the page
-    quizContainer.innerHTML = output.join("");
-} 
-
-function results(){
-
-    //gather answer containers from quiz
-    let answerContainers = quizContainer.querySelectorAll(".options");
-
-    // keep track of user's options
-    let numCorrect = 0;
-
-    // for each q 
-    qs.forEach((currentq, qNumber) => {
-        // find selected answer 
-        let answerContainer = answerContainers[qNumber];
-        // selects which radio button has been checked
-        let selector = `input[name=q${qNumber}]:checked`;
-        // userAnswer is which button has been checked
-        // {} empty object for if user didn't select answer
-        let userAnswer = (answerContainer.querySelector(selector) || {}).value;
-
-        // if answer is correct
-        if(userAnswer === currentq.answer) {
-            // add to number of correct options
-            numCorrect++;
-
-            // green when correct
-            answerContainers[qNumber].style.color = "rgb(0, 88, 4)";
-        } else {   
-            // red when incorrect
-            answerContainers[qNumber].style.color = "rgb(141, 0, 0)";
-        }
-    });
-
-    // show number of correct options out of total
-    resultsContainer.innerHTML = `${numCorrect} out of ${qs.length}`;
+window.onload = function(){
+    homeBox.querySelector(".total-question").innerHTML = questionLimit;
 }
 
-function showSlide(n) {
-    // Hide all slides by removing "active-slide" class from all qs
-    slides[currentSlide].classList.remove("active-slide");
-    // Show new slide by adding "active-slide" class to current q
-    slides[n].classList.add("active-slide");
-    // Update the current slide number
-    currentSlide = n;
-
-    // First slide - hide previous button - Else show previous button
-    if(currentSlide === 0) {
-        previousButton.style.display = "none";
-    } else {
-        previousButton.style.display = "inline-block";
-    }
-
-    // Last slide - hide next button and show submit button - Else show next button and hide submit button
-    if(currentSlide === slides.length - 1) {
-        nextButton.style.display = "none";
-        submitButton.style.display = "inline-block";
-    } else {
-        nextButton.style.display = "inline-block";
-        submitButton.style.display = "none";
-    }
-}
-
-function nextSlide() {
-    showSlide(currentSlide + 1);
-    progressPercent += 25;
-    progressBar.style.width = progressPercent +  "%";
-}
-
-function previousSlide() {
-    showSlide(currentSlide - 1);
-    progressPercent -= 25;
-    progressBar.style.width = progressPercent + "%";
-}
-
-let progressBar = document.getElementById("progress-bar");
-let progressPercent = 0;
-
-let quizContainer = document.getElementById("quiz");
-let resultsContainer = document.getElementById("results");
-let submitButton = document.getElementById("submit");
-
-//display quiz 
-quiz();
-
-let previousButton = document.getElementById("previous");
-let nextButton = document.getElementById("next");
-let slides = document.querySelectorAll(".slide");
-let currentSlide = 0;
-
-// Display Slides
-showSlide(0);
-
-// click submit, show results
-submitButton.addEventListener("click", results);
-
-// Click to show next or previous slides
-previousButton.addEventListener("click", previousSlide);
-nextButton.addEventListener("click", nextSlide); */
+  

@@ -32,10 +32,10 @@
      
 <div class="home-box ">
     <h3> Ready to test your ocen knowledge?</h3>
-    <button type="button" class="btn">Start Quiz</button>
+    <button type="button" class="btn" onclick="startQuiz()">Start Quiz</button>
 </div>
 
-<div class="quiz-box ">
+<div class="quiz-box hide">
     <div class="question-number">
      
     </div>
@@ -74,15 +74,15 @@
     </tr>
     <tr>
       <td>Percentage</td>
-      <td><span class="percentage"></span></td>
+      <td><span class="total-percentage"></span></td>
     </tr>
     <tr>
       <td>Your Total Score</td>
       <td><span class="total-score"></span></td>
     </tr>
   </table>
-  <button type="button" class="btn">Try Again</button>
-  <button type="button" class="btn">Go To Home</button>
+  <button type="button" class="btn" onclick="tryAgainQuiz()">Try Again</button>
+  <button type="button" class="btn" onclick="gotoHome()">Go Back To Ocean</button>
 
 </div>
 

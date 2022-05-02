@@ -194,6 +194,10 @@ img {
   .home-box .btn{
     margin-top: 1.5rem;
   }
+
+  .home-box.hide{
+    display: none;
+  }
   
   h3{
     display: flex;
@@ -201,7 +205,11 @@ img {
     align-content: center;
     font-size: 3rem;
   }
-  
+
+   .quiz-box.hide{
+    display: none;
+  }
+
   .quiz-box .question-number{
     font-size: 1.1rem;
     color: rgba(0,212,255,1);
@@ -276,7 +284,10 @@ img {
   .result-box{
     text-align: center;
   }
-  
+  .result-box.hide{
+    display: none;
+  }
+
   .result-box h1{
     font-size: 2.2rem;
     line-height: 42px;
@@ -300,6 +311,15 @@ img {
   }
   .result-box .btn{
     margin-right: 20px;
+  }
+
+  @media(max-width: 767px){
+    .result-box .btn {
+      margin-bottom: 15px;
+    }
+    body {
+      padding: 15px;
+    }
   }
 
   /* ===== HOW TO HELP ===== */
