@@ -30,11 +30,16 @@ const questionNumber = document.querySelector(".question-number")
 const questionText = document.querySelector(".question-text")
 const optionContainer = document.querySelector(".option-container")
 const answersIndicatorContainer = document.querySelector(".answers-indicator")
+const homeBox = document.querySelector(".home-box");
+const quizBox = document.querySelector(".quiz-box");
+const resultBox = document.querySelector(".result-box")
 
 let questionCounter = 0;
 let currentQuestion;
 let availableQuestions = [];
 let avaiableOptions = [];
+let correctAnswers = 0;
+let attempts = 0;
 
 //push the questions into availableQuestions
 function setAvailableQuestions(){
@@ -97,6 +102,7 @@ function getResult(element){
         element.classList.add("correct");
         //add the indicator to correct mark
         updateAnswerIndicator("correct");
+        correctAnswers++;
     }
     else {
         //set the red color to the incorrect option
@@ -111,7 +117,7 @@ function getResult(element){
             }
         }
     }
-    
+    attempt++
     unclickableOptions();
 }
 
@@ -132,17 +138,23 @@ function answersIndicator(){
     }
 }
 
-function updateAnswerIndicator("wrong"){
+function updateAnswerIndicator(markType){
+    answersIndicatorContainer.children[questionCounter-1].classList.add(markType)
     
 }
 
 function next(){
     if(questionCounter === quiz.length){
         console.log('quiz over')
+        quizOver();
     }
     else{
         getNewQuestion();
     }
+}
+
+function quizOver(){
+
 }
 
 window.onload = function(){
