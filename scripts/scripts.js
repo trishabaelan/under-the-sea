@@ -29,11 +29,17 @@ const quiz = [
 const questionNumber = document.querySelector(".question-number")
 const questionText = document.querySelector(".question-text")
 const optionContainer = document.querySelector(".option-container")
+const answersIndicatorContainer = document.querySelector(".answers-indicator")
+const homeBox = document.querySelector(".home-box");
+const quizBox = document.querySelector(".quiz-box");
+const resultBox = document.querySelector(".result-box")
 
 let questionCounter = 0;
 let currentQuestion;
 let availableQuestions = [];
 let avaiableOptions = [];
+let correctAnswers = 0;
+let attempts = 0;
 
 //push the questions into availableQuestions
 function setAvailableQuestions(){
@@ -94,10 +100,14 @@ function getResult(element){
     if(id === currentQuestion.answer){
         //set the green color to the correct option
         element.classList.add("correct");
+        //add the indicator to correct mark
+        updateAnswerIndicator("correct");
+        correctAnswers++;
     }
     else {
         //set the red color to the incorrect option
         element.classList.add("wrong");
+        updateAnswerIndicator("wrong");
 
         //if the answer is incorrect the show the correct option
         const optionLen = optionContainer.children.length;
@@ -107,7 +117,7 @@ function getResult(element){
             }
         }
     }
-    
+    attempt++
     unclickableOptions();
 }
 
@@ -118,13 +128,33 @@ function unclickableOptions(){
         optionContainer.children[i].classList.add("already-answered");
     }
 }
+
+function answersIndicator(){
+    const totalQuestion = quiz.length;
+    for(let i=0; i<totalQuestion; i++){
+        const indicator = document.createElement("div");
+        answersIndicatorContainer.appendChild(indicator);
+
+    }
+}
+
+function updateAnswerIndicator(markType){
+    answersIndicatorContainer.children[questionCounter-1].classList.add(markType)
+    
+}
+
 function next(){
     if(questionCounter === quiz.length){
         console.log('quiz over')
+        quizOver();
     }
     else{
         getNewQuestion();
     }
+}
+
+function quizOver(){
+
 }
 
 window.onload = function(){
@@ -132,6 +162,8 @@ window.onload = function(){
     setAvailableQuestions();
     //second we will call getNewQuestion(); function
     getNewQuestion()
+    //to create indicators of answers
+    answersIndicator()
 }
 
 
