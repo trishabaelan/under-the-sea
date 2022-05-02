@@ -195,7 +195,7 @@ function quizResult(){
     resultBox.querySelector(".total-wrong").innerHTML = attempt-correctAnswers;
     const percentage = (correctAnswers/questionLimit)*100;
     resultBox.querySelector(".total-percentage").innerHTML = percentage.toFixed() + "%";
-    resultBox.querySelector(".total-score").innerHTML = "correctAnswers + " / " + questionLimit;
+    resultBox.querySelector(".total-score").innerHTML = "correctAnswers + " / " + questionLimit";
 }
 
 
