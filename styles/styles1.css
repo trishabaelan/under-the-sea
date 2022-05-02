@@ -322,40 +322,17 @@ img {
     font-size: 1.1rem;
   }
   .result-box .btn{
-    margin-right: 20px;
-  }
-
-  @media(max-width: 767px){
-    .result-box .btn {
-      margin-bottom: 15px;
-    }
-    body {
-      padding: 15px;
-    }
-    .home-box h3{
-      display: flex;
-      justify-content: center;
-      align-content: center;
-      text-align: center;
-      font-size: 2rem;
-      color: white;
-    }
-    .home-box .btn{
-      margin-top: 1.5rem;
-      margin-left: 18%;
-      margin-right: 18%;
-    }
-    .result-box .btn{
-      margin-right: 18%;
-      margin-left: 18%;
-    }
-
-
-
-
-
+    margin-right: 18%;
+    margin-left: 18%;
+    margin-bottom: 1em;
 
   }
+
+  .result-box a{
+    text-decoration: none;
+  }
+
+
 
   /* ===== HOW TO HELP ===== */
 
@@ -527,6 +504,32 @@ img {
       border-radius: 20px;
     }
   /* ===== MOBILE VERSION // Quiz ===== */
+    .result-box .btn {
+      margin-bottom: 15px;
+    }
+    body {
+      padding: 15px;
+    }
+    .home-box h3{
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      text-align: center;
+      font-size: 2rem;
+      color: white;
+    }
+    .home-box .btn{
+      margin-top: 1.5rem;
+      margin-left: 18%;
+      margin-right: 18%;
+    }
+    .result-box .btn{
+      margin-right: 18%;
+      margin-left: 18%;
+      width: 200px;
+      height: 100px;
+    }
+  }
   /* ===== MOBILE VERSION // How to Help ===== */
     .steps {
       display: grid;
