@@ -117,7 +117,7 @@ h3{
 
  .quiz-box .option-container .option.wrong{
     background-color: red;
-    color: white;
+    color: white;}
 
 .quiz-box .btn {
   margin: 15px 0;
