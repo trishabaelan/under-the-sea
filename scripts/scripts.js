@@ -198,6 +198,7 @@ function quizResult(){
     resultBox.querySelector(".total-score").innerHTML = correctAnswers + " / " + questionLimit;
 }
 
+
 function resetQuiz(){
     questionCounter = 0;
     correctAnswers = 0;
