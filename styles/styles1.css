@@ -69,9 +69,12 @@ h4 {
 }
 .intro {
   color: white;
-  margin-right: 10%;
-  margin-left: 10%;
+  margin-right: 2%;
+  margin-left: 2%;
+  text-align: justify;
+  text-align-last: center;
   justify-content: center;
+  align-content: center;
   font-size: 1.25rem;
   background-color: #003f9a;
   padding: 3%;
@@ -175,7 +178,8 @@ img {
     margin-bottom: 2em;
     margin-left: 25%;
     margin-right: 25%;
-    padding: 1em 0.5em;
+    padding: 0.25rem;
+    border-radius: 20px;
   }
 
   /* ===== QUIZ PAGE ===== */
@@ -248,6 +252,7 @@ img {
   .quiz-box .option-container .option.correct{
     background-color: rgba(0,212,255,1);
     color: white;
+    border-radius: 20px;
   
   }
   
@@ -381,7 +386,116 @@ img {
    .nav a:active {
       color: #003f9a;
     }
+
   /* ===== MOBILE VERSION // Homepage ===== */
+  .homepage {
+    margin: 0px 1% 1% 1%;
+  }
+  .homepage h4 {
+    font-size: 2rem;}
+
+  .intro {
+    color: white;
+    text-align: justify;
+    text-align-last: center;
+    font-size: 1rem;
+    background-color: #003f9a;
+    padding: 5%;
+    border-radius: 10px;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  .fish_content p {
+    font-size: 1rem;
+    text-align: justify;
+    text-align-last: center;
+}
+.fish_content h3 {
+  font-size: 2rem;
+}
+  .epi_fish {
+      display: grid;
+      grid-template-columns: 100%}
+  .epi {
+      color: white;
+  }
+  .meso {
+      color:white;
+  }
+  .bath {
+      color:white;
+  }
+  .abys {
+      color: white;
+  }
+  .hadal {
+      color: white;
+  }
+  .meso_fish {
+    display: grid;
+    grid-template-columns: 100%}
+  
+  .meso_fish p {
+      display: flex;
+      align-items: center;
+      justify-items: center;
+  }
+  
+  .bath_fish {
+    display: grid;
+    grid-template-columns: 100%}
+  
+  .bath_fish p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .abys_fish{
+    display: grid;
+    grid-template-columns: 100%}
+  
+  .abys_fish p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .hadal_fish{
+    display: grid;
+    grid-template-columns: 100%}
+  
+  .hadal_fish p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    }
+
+    .button {
+      background-color: rgba(0,212,255,1);
+      color: white;
+      padding: 10px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2em;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 20px;
+    }
   /* ===== MOBILE VERSION // Quiz ===== */
   /* ===== MOBILE VERSION // How to Help ===== */
     .steps {
