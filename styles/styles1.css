@@ -365,7 +365,17 @@ img {
     text-align: center;
     color: white;
     font-size: 1.25rem;}
-
+  
+  .howtohelp .button2 {
+      font-size: 1.5rem;
+      background-color: rgba(0,212,255,1);
+      padding: 5%;
+      margin: 5%;
+      border-radius: 20px;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+    }
 /* ===== MOBILE VERSION ===== */
   
 @media only screen and (max-width : 400px) {
@@ -534,6 +544,9 @@ img {
         font-family: Poppins;
         text-align: center;
         color: white;
+        font-size: 1rem;}
+
+      .howtohelp a {
         font-size: 1rem;
       }
-    }
+      }
