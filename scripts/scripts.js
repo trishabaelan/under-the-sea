@@ -57,8 +57,12 @@ const optionContainer = document.querySelector(".option-container")
 const answersIndicatorContainer = document.querySelector(".answers-indicator")
 const homeBox = document.querySelector(".home-box");
 const quizBox = document.querySelector(".quiz-box");
-const resultBox = document.querySelector(".result-box")
+const resultBox = document.querySelector(".result-box");
 const questionLimit = 5;
+const homeBoxBtn = document.getElementById("homeBtn");
+const nextBoxBtn = document.getElementById("nextBtn");
+const tryBoxBtn = document.getElementById("tryBtn");
+
 
 let questionCounter = 0;
 let currentQuestion;
@@ -66,6 +70,11 @@ let availableQuestions = [];
 let avaiableOptions = [];
 let correctAnswers = 0;
 let attempt = 0;
+
+//Event Listeners
+homeBoxBtn.addEventListener("click", startQuiz);
+nextBoxBtn.addEventListener("click", next);
+tryBoxBtn.addEventListener("click", tryAgainQuiz);
 
 //push the questions into availableQuestions
 function setAvailableQuestions(){
@@ -239,4 +248,4 @@ window.onload = function(){
     homeBox.querySelector(".total-question").innerHTML = questionLimit;
 }
 
-  
+
