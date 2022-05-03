@@ -226,6 +226,12 @@ img {
     display: none;
   }
 
+  .quiz-box{
+      text-align: center;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+  }
 
 
   .quiz-box .question-number{
@@ -332,10 +338,9 @@ img {
     font-size: 1.1rem;
   }
   .result-box .btn{
-    margin-right: 18%;
-    margin-left: 18%;
+    width: 200px;
+    height: 100px;
     margin-bottom: 1em;
-
   }
 
   .result-box a{
@@ -549,8 +554,8 @@ img {
     .result-box .btn{
       margin-right: 18%;
       margin-left: 18%;
-      width: 200px;
-      height: 100px;
+      width: 170px;
+      height: 70px;
     }
   /* ===== MOBILE VERSION // How to Help ===== */
     .steps {
@@ -572,7 +577,7 @@ img {
       
       .howtohelp h4 {
         font-family: Poppins;
-        text-align: center;
+        text-align: left;
         color: #003f9a;
         background: white;
         font-size: 1.5rem;
