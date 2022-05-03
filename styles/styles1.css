@@ -11,7 +11,8 @@ html {
     box-sizing: inherit;
   }
 
-body{background: rgb(2,0,36);
+body
+  {background: rgb(2,0,36);
     background: linear-gradient(0deg, rgba(2,0,36,1) 10%, rgba(9,9,121,1) 49%, rgba(0,212,255,1) 100%);
     font-family: 'Poppins', sans-serif;
     margin-right: 8%;
@@ -441,6 +442,38 @@ width: 100%;
     padding: 0.25rem;
     border-radius: 10px;
     }
+
+  /* ===== ABOUT PAGE ===== */
+
+  .aboutus {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-family: Poppins;
+    color: white;
+    text-align: center;
+    line-height: 300%;
+    font-size: 1.25rem;
+    margin-top: 5%;
+  }
+
+  .aboutus img {
+    border-radius: 50%;
+    height: 200px;
+    width: auto;}
+    
+  .aboutus a {
+    font-family: Poppins;
+    color: #003f9a;
+    text-align: center;
+    text-decoration: none;
+    background-color: white;
+    border-radius: 20px;
+    padding: 3%;
+  }
+  
+  .aboutus a:hover {
+    color: cyan;
+  }
 /* ===== MOBILE VERSION ===== */
   
 @media only screen and (max-width : 768px) {
