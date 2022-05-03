@@ -121,7 +121,7 @@ h4 {
   display: flex;
     align-items: center;
     justify-items: center;
-    margin-bottom: 3em;
+    margin-left: 3em;
 }
 
 .meso_fish p {
@@ -209,7 +209,7 @@ width: 100%;
 
 .fish_content p {
     font-size: 1rem;
-    margin-left: 2rem;
+    
 }
 
 .introP {
@@ -519,7 +519,7 @@ width: 100%;
     font-size: 1rem;
     text-align: justify;
     text-align-last: center;
-    margin-left: 0rem;
+    
 }
 .fish_content h3 {
   font-size: 2rem;
