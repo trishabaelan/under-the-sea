@@ -61,7 +61,7 @@ const resultBox = document.querySelector(".result-box");
 const questionLimit = 5;
 const homeBoxBtn = document.getElementById("homeBtn");
 const nextBoxBtn = document.getElementById("nextBtn");
-const tryBoxBtn = document.getElementById("tryBtn");
+const tryBtn = document.getElementById("tryBtn");
 
 
 let questionCounter = 0;
@@ -74,7 +74,7 @@ let attempt = 0;
 //Event Listeners
 homeBoxBtn.addEventListener("click", startQuiz);
 nextBoxBtn.addEventListener("click", next);
-tryBoxBtn.addEventListener("click", tryAgainQuiz);
+tryBtn.addEventListener("click", tryAgainQuiz);
 
 //push the questions into availableQuestions
 function setAvailableQuestions(){
