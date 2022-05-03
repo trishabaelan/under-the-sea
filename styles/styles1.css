@@ -302,6 +302,9 @@ img {
 
   .result-box{
     text-align: center;
+    display: grid;
+    justify-items: center;
+    align-items: center;
   }
   .result-box.hide{
     display: none;
@@ -314,11 +317,9 @@ img {
   }
   
   .result-box table{
-    width: 70%;
+    width: 50%;
     border-collapse: collapse;
     margin: 30px 0;
-    display: flex;
-    align-items: center;
   }
   
   .result-box table td{
