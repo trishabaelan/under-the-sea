@@ -270,7 +270,7 @@ width: 100%;
     display: none;
   }
 
-  .quiz-box{
+  .home-box{
       text-align: center;
       display: grid;
       justify-items: center;
@@ -314,9 +314,8 @@ width: 100%;
   
   
   .quiz-box .option-container .option.correct{
-    background-color: rgba(0,212,255,1);
+    background-color: green;
     color: white;
-    border-radius: 20px;
   
   }
   
@@ -343,7 +342,7 @@ width: 100%;
   }
 
   .quiz-box .answers-indicator div.correct{
-    background-color: rgba(0,212,255,1);
+    background-color: green;
   }
   
   .quiz-box .answers-indicator div.wrong{
@@ -383,7 +382,7 @@ width: 100%;
   }
   .result-box .btn{
     width: 200px;
-    height: 100px;
+    height: 80px;
     margin-bottom: 1em;
   }
 
