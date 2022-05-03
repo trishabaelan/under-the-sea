@@ -93,6 +93,7 @@ h4 {
     display: grid;
     grid-template-columns: repeat(2,auto);
     grid-template-rows: repeat(3,auto);
+    align-items: start;
 }
 .epi {
     color: white;
@@ -168,9 +169,12 @@ img {
   }
 
 .fish_content p {
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
+.introP {
+  font-size: 1.25rem;
+}
 
   .button {
     background-color: white;
