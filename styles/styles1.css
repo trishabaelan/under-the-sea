@@ -94,6 +94,7 @@ h4 {
     display: grid;
     grid-template-columns: repeat(2,auto);
     grid-template-rows: repeat(3,auto);
+    align-items: end;
 }
 .epi {
     color: white;
@@ -114,6 +115,12 @@ h4 {
     display: grid;
     grid-template-columns: repeat(2,auto);
     grid-template-rows: repeat(3,auto);
+}
+
+.epi_fish p {
+  display: flex;
+    align-items: center;
+    justify-items: center;
 }
 
 .meso_fish p {
@@ -158,20 +165,54 @@ h4 {
     justify-content: center;
 }
 
-img {
+
+.small-size {
     max-width: 100%;
     height: auto;
     display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 5rem;
-  width: 60%;
+  width: 50%;
   }
 
-.fish_content p {
-    font-size: 1.25rem;
+.mid-size {
+  max-width: 100%;
+    height: auto;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+  width: 70%;
 }
 
+.big-size {
+  max-width: 100%;
+    height: auto;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+  width: 90%;
+}
+
+.biggest-size {
+  max-width: 100%;
+  height: auto;
+  display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 5rem;
+width: 100%;
+}
+
+.fish_content p {
+    font-size: 1rem;
+}
+
+.introP {
+  font-size: 1.25rem;
+}
 
   .button {
     background-color: white;
@@ -191,6 +232,8 @@ img {
     padding: 0.25rem;
     border-radius: 20px;
   }
+
+
 
   /* ===== QUIZ PAGE ===== */
   .btn {
@@ -227,6 +270,12 @@ img {
     display: none;
   }
 
+  .quiz-box{
+      text-align: center;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+  }
 
 
   .quiz-box .question-number{
@@ -303,6 +352,9 @@ img {
 
   .result-box{
     text-align: center;
+    display: grid;
+    justify-items: center;
+    align-items: center;
   }
   .result-box.hide{
     display: none;
@@ -315,11 +367,9 @@ img {
   }
   
   .result-box table{
-    width: 70%;
+    width: 50%;
     border-collapse: collapse;
     margin: 30px 0;
-    display: flex;
-    align-items: center;
   }
   
   .result-box table td{
@@ -332,10 +382,9 @@ img {
     font-size: 1.1rem;
   }
   .result-box .btn{
-    margin-right: 18%;
-    margin-left: 18%;
+    width: 200px;
+    height: 100px;
     margin-bottom: 1em;
-
   }
 
   .result-box a{
@@ -561,7 +610,12 @@ img {
       border-radius: 20px;
     }
   /* ===== MOBILE VERSION // Quiz ===== */
-    .result-box .btn {
+    .home-box {
+      display: grid;
+      justify-items: center;
+      align-items: center;
+    }
+  .result-box .btn {
       margin-bottom: 15px;
     }
     .home-box h3{
@@ -580,8 +634,8 @@ img {
     .result-box .btn{
       margin-right: 18%;
       margin-left: 18%;
-      width: 200px;
-      height: 100px;
+      width: 170px;
+      height: 70px;
     }
   /* ===== MOBILE VERSION // How to Help ===== */
     .steps {
@@ -615,7 +669,7 @@ img {
       
       .howtohelp p {
         font-family: Poppins;
-        text-align: center;
+        text-align: left;
         color: white;
         font-size: 1rem;}
 
