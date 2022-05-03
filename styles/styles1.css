@@ -348,11 +348,9 @@ img {
 
 .steps {
     display: grid;
-    grid-template-columns: 80%;
-    grid-column-gap: 20px;
-    margin:auto;
-    justify-content: center;
-  }
+    grid-template-columns: 70%;
+    margin-bottom: 5%;
+    justify-content: center;}
 
   .howtohelp h2 { 
     font-family: Poppins;
@@ -363,7 +361,7 @@ img {
   
   .howtohelp h4 {
     font-family: Poppins;
-    text-align: center;
+    text-align: left;
     color: #003f9a;
     background: white;
     font-size: 1.5rem;
@@ -374,19 +372,27 @@ img {
   
   .howtohelp p {
     font-family: Poppins;
-    text-align: center;
+    text-align: left;
     color: white;
     font-size: 1.25rem;}
   
   .howtohelp .button2 {
-      font-size: 1.5rem;
-      background-color: rgba(0,212,255,1);
-      padding: 5%;
-      margin: 5%;
-      border-radius: 20px;
-      text-align: center;
-      text-decoration: none;
-      color: white;
+    background-color: white;
+    border: none;
+    color: #003f9a;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2em;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 0.25rem;
+    border-radius: 10px;
     }
 /* ===== MOBILE VERSION ===== */
   
@@ -546,14 +552,14 @@ img {
       width: 200px;
       height: 100px;
     }
-  }
   /* ===== MOBILE VERSION // How to Help ===== */
     .steps {
       display: grid;
       grid-template-columns: 90%;
       grid-column-gap: 20px;
       margin:auto;
-      justify-content: center;}
+      justify-content: center;
+      margin-bottom: 10%;}
 
       .howtohelp h2 { 
         font-family: Poppins;
@@ -585,4 +591,4 @@ img {
       .howtohelp a {
         font-size: 1rem;
       }
-      
+    }
