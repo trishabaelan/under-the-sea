@@ -93,7 +93,7 @@ h4 {
     display: grid;
     grid-template-columns: repeat(2,auto);
     grid-template-rows: repeat(3,auto);
-    align-items: start;
+    align-items: end;
 }
 .epi {
     color: white;
@@ -116,6 +116,11 @@ h4 {
     grid-template-rows: repeat(3,auto);
 }
 
+.epi_fish p {
+  display: flex;
+    align-items: center;
+    justify-items: center;
+}
 .meso_fish p {
     display: flex;
     align-items: center;
@@ -158,15 +163,46 @@ h4 {
     justify-content: center;
 }
 
-img {
+
+.small-size {
     max-width: 100%;
     height: auto;
     display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 5rem;
-  width: 60%;
+  width: 50%;
   }
+
+.mid-size {
+  max-width: 100%;
+    height: auto;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+  width: 70%;
+}
+
+.big-size {
+  max-width: 100%;
+    height: auto;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+  width: 90%;
+}
+
+.biggest-size {
+  max-width: 100%;
+  height: auto;
+  display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 5rem;
+width: 100%;
+}
 
 .fish_content p {
     font-size: 1rem;
@@ -194,6 +230,8 @@ img {
     padding: 0.25rem;
     border-radius: 20px;
   }
+
+
 
   /* ===== QUIZ PAGE ===== */
   .btn {
