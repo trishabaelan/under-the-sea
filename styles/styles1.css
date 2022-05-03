@@ -173,9 +173,9 @@ img {
 
 
   .button {
-    background-color: rgba(0,212,255,1);
+    background-color: white;
     border: none;
-    color: white;
+    color: #003f9a;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
