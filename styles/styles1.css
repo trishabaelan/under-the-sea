@@ -595,8 +595,8 @@ width: 100%;
     }
 
     .button {
-      background-color: rgba(0,212,255,1);
-      color: white;
+      background-color: white;
+      color: #003f9a;
       padding: 10px;
       text-align: center;
       text-decoration: none;
