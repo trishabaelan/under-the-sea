@@ -270,12 +270,6 @@ width: 100%;
     display: none;
   }
 
-  .home-box{
-      text-align: center;
-      display: grid;
-      justify-items: center;
-      align-items: center;
-  }
 
 
   .quiz-box .question-number{
