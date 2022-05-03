@@ -131,7 +131,7 @@ function getNewQuestion(){
 
 //get the result of current attempt question
 function getResult(element){
-    const id = parseInt(element.id);
+    let id = parseInt(element.id);
     //get the answer by comparing the id of clicked option
     if(id === currentQuestion.answer){
         //set the green color to the correct option
@@ -165,6 +165,8 @@ function unclickableOptions(){
     }
 }
 
+
+
 function answersIndicator(){
     answersIndicatorContainer.innerHTML = '';
     const totalQuestion = questionLimit;
@@ -188,6 +190,7 @@ function next(){
         getNewQuestion();
     }
 }
+
 
 function quizOver(){
     //hide quiz box
