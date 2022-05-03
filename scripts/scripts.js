@@ -58,7 +58,6 @@ const answersIndicatorContainer = document.querySelector(".answers-indicator")
 const homeBox = document.querySelector(".home-box");
 const quizBox = document.querySelector(".quiz-box");
 const resultBox = document.querySelector(".result-box");
-const answerResult = document.querySelector(".answer-result");
 const questionLimit = 5;
 const homeBoxBtn = document.getElementById("homeBtn");
 const nextBoxBtn = document.getElementById("nextBtn");
@@ -132,7 +131,7 @@ function getNewQuestion(){
 
 //get the result of current attempt question
 function getResult(element){
-    const id = parseInt(element.id);
+    let id = parseInt(element.id);
     //get the answer by comparing the id of clicked option
     if(id === currentQuestion.answer){
         //set the green color to the correct option
@@ -140,12 +139,11 @@ function getResult(element){
         //add the indicator to correct mark
         updateAnswerIndicator("correct");
         correctAnswers++;
-        answerResult.innerHTML = "correct";
+    }
     else {
         //set the red color to the incorrect option
         element.classList.add("wrong");
         updateAnswerIndicator("wrong");
-        answerResult.innerHTML = "correct";
 
         //if the answer is incorrect the show the correct option
         const optionLen = optionContainer.children.length;
@@ -167,6 +165,8 @@ function unclickableOptions(){
     }
 }
 
+
+
 function answersIndicator(){
     answersIndicatorContainer.innerHTML = '';
     const totalQuestion = questionLimit;
@@ -182,8 +182,6 @@ function updateAnswerIndicator(markType){
     
 }
 
-
-
 function next(){
     if(questionCounter === questionLimit){
         quizOver();
@@ -192,6 +190,7 @@ function next(){
         getNewQuestion();
     }
 }
+
 
 function quizOver(){
     //hide quiz box
