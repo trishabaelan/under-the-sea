@@ -530,6 +530,9 @@ width: 100%;
   .epi {
       color: white;
   }
+  .epi_fish p {
+      margin-left: 0em;}
+      
   .meso {
       color:white;
   }
