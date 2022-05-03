@@ -676,4 +676,8 @@ width: 100%;
       .howtohelp a {
         font-size: 1rem;
       }
+    /* ===== ABOUT PAGE ======*/
+    .aboutus {
+      display: grid;
+      grid-template-columns: 100%}
     }
