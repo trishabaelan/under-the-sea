@@ -383,7 +383,7 @@ img {
     }
 /* ===== MOBILE VERSION ===== */
   
-@media only screen and (max-width : 400px) {
+@media only screen and (max-width : 768px) {
   /* ===== MOBILE VERSION // Title and Nav ===== */
   h1 {
     display: flex;
@@ -578,4 +578,4 @@ img {
       .howtohelp a {
         font-size: 1rem;
       }
-      }
+      
