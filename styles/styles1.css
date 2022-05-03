@@ -454,6 +454,7 @@ width: 100%;
     text-align: center;
     line-height: 300%;
     font-size: 1.25rem;
+    margin-top: 5%;
   }
 
   .aboutus img {
@@ -468,7 +469,7 @@ width: 100%;
     text-decoration: none;
     background-color: white;
     border-radius: 20px;
-    padding: 1%;
+    padding: 3%;
   }
   
   .aboutus a:hover {
