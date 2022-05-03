@@ -535,7 +535,12 @@ img {
       border-radius: 20px;
     }
   /* ===== MOBILE VERSION // Quiz ===== */
-    .result-box .btn {
+    .home-box {
+      display: grid;
+      justify-items: center;
+      align-items: center;
+    }
+  .result-box .btn {
       margin-bottom: 15px;
     }
     .home-box h3{
@@ -577,7 +582,7 @@ img {
       
       .howtohelp h4 {
         font-family: Poppins;
-        text-align: left;
+        text-align: center;
         color: #003f9a;
         background: white;
         font-size: 1.5rem;
@@ -589,7 +594,7 @@ img {
       
       .howtohelp p {
         font-family: Poppins;
-        text-align: center;
+        text-align: left;
         color: white;
         font-size: 1rem;}
 
