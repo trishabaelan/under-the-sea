@@ -250,6 +250,12 @@ width: 100%;
     margin-bottom: 10%
   }
   
+  .home-box {
+      text-align: center;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+  }
 
   .home-box .btn{
     margin-top: 1.5rem;
@@ -674,3 +680,5 @@ width: 100%;
         font-size: 1rem;
       }
     }
+
+    
