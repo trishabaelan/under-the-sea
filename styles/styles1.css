@@ -208,7 +208,7 @@ width: 100%;
 }
 
 .fish_content p {
-    font-size: 1rem;
+    font-size: 1.25rem;
     
 }
 
@@ -476,6 +476,10 @@ width: 100%;
   .aboutus a:hover {
     color: lightskyblue;
   }
+
+  .aboutusgradient {
+    height: 100vh;
+  }
 /* ===== MOBILE VERSION ===== */
   
 @media only screen and (max-width : 768px) {
@@ -536,6 +540,9 @@ width: 100%;
   .epi {
       color: white;
   }
+  .epi_fish p {
+    margin-left: 0em;}
+  
   .meso {
       color:white;
   }
@@ -598,8 +605,8 @@ width: 100%;
     }
 
     .button {
-      background-color: rgba(0,212,255,1);
-      color: white;
+      background-color: white;
+      color: #003f9a;
       padding: 10px;
       text-align: center;
       text-decoration: none;
@@ -679,6 +686,13 @@ width: 100%;
       .howtohelp a {
         font-size: 1rem;
       }
-    }
+    /* ===== ABOUT PAGE ======*/
+    .aboutus {
+      display: grid;
+      grid-template-columns: 100%;}
 
+    .aboutusgradient {
+      height: 80em;
+    }
+    
     
